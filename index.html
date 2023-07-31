@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quote Generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #5372F0;
+}
+.display{
+  width: 650px;
+  padding: 30px 30px 25px;
+  border:5px solid white;
+  border-radius: 20px;
+  margin: 0;
+  background-color: white;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+}
+    
+ .qut{
+ font-size: 22px;
+ font-family: italic;
+}
+button{
+  background-color: #5372F0;
+  border: none;
+  color: white;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  font-size: var(.938rem);
+  cursor: pointer;
+  }
+  </style>
+  <script>
+    function generateQuote() {
+      var quotes = [
+        "Unlock the power of your words and let them paint the canvas of inspiration.",
+        "Embrace the beauty of imperfection, for within it lies the spark of creativity.",
+        "Let your dreams be the compass that guides your actions, and watch as your path unfolds with purpose.",
+        "Courage is not the absence of fear, but the triumph over it. Harness its strength and conquer new horizons.",
+        "Life's greatest stories are written by those who dare to defy the ordinary and embrace the extraordinary."
+      ];
+      var randomIndex = Math.floor(Math.random() * quotes.length);
+      var quote = quotes[randomIndex];
+      document.getElementById("quote").textContent = quote;
+    }
+  </script>
+</head>
+<body>
+  <div class="display">
+   <div class="qut">
+    <p  id="quote"></p>
+   </div>
+  <div class="but">
+    <button onclick="generateQuote()">Generate Quote</button>
+  </div>
+  </div>
+</body>
+</html>
